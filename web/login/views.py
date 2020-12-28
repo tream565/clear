@@ -6,6 +6,10 @@ from login.forms import LoginForm
 def ok(request):
     return render(request,'login_success.html')
 
+def log_out(request):
+    logout(request)
+    return render(request,'logout_success.html')
+
 def sign_in(request):
     form = LoginForm()
     if request.method == 'POST':
